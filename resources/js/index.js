@@ -64,7 +64,7 @@ $(function () {
 
   const texts = {
     en: {
-      title: "SEE YOU AGAIN, PHILIA093",
+      title: "Our 28-Year Promise: I Will Be There.",
       subTitle1: "「This time, together with me…」",
       subTitle2: "「Let’s write a new chapter of the story♪」",
       days: "days",
@@ -281,4 +281,5 @@ document.addEventListener('WeixinJSBridgeReady', function () {
   // 如果想在微信里也自动播音乐，可以取消下面这行注释
   // window.playBgMusic();
 }, false);
+
 
