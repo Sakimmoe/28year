@@ -175,7 +175,7 @@ $(function () {
   }
 
   // 倒计时目标时间（UTC+8）
-  const futureTime = "2026-11-12 12:00:00";
+  const futureTime = "2052-02-29 00:00:00";
   const targetDate = parseAsUTC8(futureTime);
 
   setLangText();
@@ -281,3 +281,4 @@ document.addEventListener('WeixinJSBridgeReady', function () {
   // 如果想在微信里也自动播音乐，可以取消下面这行注释
   // window.playBgMusic();
 }, false);
+
