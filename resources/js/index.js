@@ -74,7 +74,7 @@ $(function () {
       countingUp: "♪"
     },
     zh: {
-      title: "SEE YOU AGAIN, PHILIA093",
+      title: "Our 28-Year Promise: I Will Be There.",
       subTitle1: "「这次，与我一起……」",
       subTitle2: "「为故事写下新的篇章吧♪」",
       days: "days",
@@ -281,5 +281,6 @@ document.addEventListener('WeixinJSBridgeReady', function () {
   // 如果想在微信里也自动播音乐，可以取消下面这行注释
   // window.playBgMusic();
 }, false);
+
 
 
