@@ -86,10 +86,8 @@ $(function () {
   };
 
   function getUserLang() {
-    // ****** 关键修改在这里 ******
-    // 始终返回 'en'，强制默认显示英文文本
-    return "en"; 
-    // ****** 关键修改在这里 ******
+    const lang = navigator.language || navigator.userLanguage || "";
+    return lang.toLowerCase().startsWith("zh") ? "zh" : "en";
   }
 
   let currentLang = getUserLang();
