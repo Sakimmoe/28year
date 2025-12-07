@@ -1,173 +1,125 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>28年后 你还会记得我吗</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="resources/css/index.css">
-  <link rel="icon" href="resources/images/logo.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>28年后 你还会记得我吗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources/css/index.css">
+  <link rel="icon" href="resources/images/logo.png" type="image/png">
 </head>
 
 <body>
-  <div class="code-overlay" aria-hidden="true">
-    <pre id="code-stream"></pre>
-  </div>
-  <div id="intro">
-    <div class="intro-inner" role="dialog" aria-label="Intro">
-      <div class="intro-line">
-        <span>Hello World</span>
-        <span class="dots" aria-hidden="true"></span>
-        <span class="caret" aria-hidden="true"></span>
-      </div>
-      <div class="intro-hint" aria-hidden="true">Please Press Any Key♪</div>
-    </div>
-  </div>
-  <div class="background">
-<video
-  id="bg-video"
-  class="background-video"
+  <div class="code-overlay" aria-hidden="true">
+    <pre id="code-stream"></pre>
+  </div>
+  <div id="intro">
+    <div class="intro-inner" role="dialog" aria-label="Intro">
+      <div class="intro-line">
+        <span>Hello World</span>
+        <span class="dots" aria-hidden="true"></span>
+        <span class="caret" aria-hidden="true"></span>
+      </div>
+      <div class="intro-hint" aria-hidden="true">Please Press Any Key♪</div>
+    </div>
+  </div>
+  <div class="background">
+    <video
+      id="bg-video"
+      class="background-video"
+      src="resources/images/cyrene.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      x5-playsinline="true"
+      x5-video-player-type="h5"
+      x5-video-orientation="portrait"
+      preload="auto"
+      disablepictureinpicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+    ></video>
+    
+    <div class="lang-switch">
+      <span id="switch-en" role="button" tabindex="0">EN</span> |
+      <span id="switch-zh" role="button" tabindex="0">ZH</span>
+    </div>
+    
+    <div class="gradient-overlay"></div>
+    
+    <div class="content">
+      <h2 class="title">H E L L O &nbsp; W O R L D</h2>
 
-  src="resources/images/cyrene.mp4"
+      <div class="time-box">
+        <div class="days">
+          <p class="day value">00</p>
+          <span class="text">days</span>
+        </div>
+        <div class="hours">
+          <p class="hour value">00</p>
+          <span class="text">hours</span>
+        </div>
+        <div class="mins">
+          <p class="min value">00</p>
+          <span class="text">min</span>
+        </div>
+        <div class="secs">
+          <p class="sec value">00</p>
+          <span class="text">sec</span>
+        </div>
+      </div>
 
-  autoplay
-  muted
-  loop
+      <p class="sub-title">「This time, together with me…」</p>
+      <p class="sub-title">「Let’s write a new chapter of the story♪」</p>
+      <p class="sub-title tips"></p>
 
-  playsinline
-  webkit-playsinline
-  x5-playsinline="true"
-  x5-video-player-type="h5"
-  x5-video-orientation="portrait"
+      <div class="meta-row" role="contentinfo" aria-label="Site meta">
+        <div class="icp-box">
+          <a class="meta-badge icp"
+            href="https://icp.gov.moe/?keyword=20257728"
+            target="_blank"
+            rel="noopener noreferrer">
+            萌ICP备20257728号
+          </a>
+        </div>
 
-  preload="auto"
-  disablepictureinpicture
-  controlsList="nodownload nofullscreen noremoteplayback"
-></video>
+        <a class="meta-badge email"
+          href="mailto:762930756@qq.com"
+          aria-label="Email: 762930756@qq.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 5h20v14H2V5zm2 2v10h16V7l-8 5L4 7z" fill="currentColor"/>
+          </svg>
+          <span>762930756@qq.com</span>
+        </a>
 
+        <div class="counter-box">
+          <span class="counter-label">「 访 问 人 数: 」</span>
+          <img
+            src="https://count.getloli.com/@cyrenecount?name=cyrenecount&theme=food&padding=8&offset=0&align=top&scale=1&pixelated=1&darkmode=0"
+            alt="Site visit counter"
+            class="visit-counter"
+            loading="lazy"
+            decoding="async"
+            aria-label="Site visit counter">
+        </div>
+      </div>
+    </div>
+    
+    <div class="music-control">
+      <img id="music-btn" src="resources/images/musicon.webp" alt="Music Toggle">
+    </div>
+  </div>
+  <audio id="bg-music" preload="none" loop>
+    <source src="resources/audio/true.mp3" type="audio/mpeg">
+  </audio>
 
-    <div class="info">
-      <div class="lang-switch">
-        <span id="switch-en" role="button" tabindex="0">EN</span> |
-        <span id="switch-zh" role="button" tabindex="0">ZH</span>
-      </div>
-
-      <div class="gradient-overlay"></div>
-
-      <div class="time">
-        <h2 class="title">H E L L O &nbsp; W O R L D</h2>
-
-        <div class="time-box">
-          <div class="days">
-            <p class="day value">00</p>
-            <span class="text">days</span>
-          </div>
-          <div class="hours">
-            <p class="hour value">00</p>
-            <span class="text">hours</span>
-          </div>
-          <div class="mins">
-            <p class="min value">00</p>
-            <span class="text">min</span>
-          </div>
-          <div class="secs">
-            <p class="sec value">00</p>
-            <span class="text">sec</span>
-          </div>
-        </div>
-
-        <p class="sub-title">「This time, together with me…」</p>
-        <p class="sub-title">「Let’s write a new chapter of the story♪」</p>
-        <p class="sub-title tips"></p>
-
-        <div class="meta-row" role="contentinfo" aria-label="Site meta">
-          <div class="icp-box">
-            <a class="meta-badge icp"
-               href="https://icp.gov.moe/?keyword=20257728"
-               target="_blank"
-               rel="noopener noreferrer">
-              萌ICP备20257728号
-            </a>
-          </div>
-
-          <a class="meta-badge email"
-             href="mailto:762930756@qq.com"
-             aria-label="Email: 762930756@qq.com">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M2 5h20v14H2V5zm2 2v10h16V7l-8 5L4 7z" fill="currentColor"/>
-            </svg>
-            <span>762930756@qq.com</span>
-          </a>
-
-          <div class="counter-box">
-            <span class="counter-label">「 访 问 人 数: 」</span>
-            <img
-              src="https://count.getloli.com/@cyrenecount?name=cyrenecount&theme=food&padding=8&offset=0&align=top&scale=1&pixelated=1&darkmode=0"
-              alt="Site visit counter"
-              class="visit-counter"
-              loading="lazy"
-              decoding="async"
-              aria-label="Site visit counter">
-          </div>
-        </div>
-
-        <div class="music-control">
-          <img id="music-btn" src="resources/images/musicon.webp" alt="Music Toggle">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <audio id="bg-music" preload="none" loop muted> 
-    <source src="resources/audio/true.mp3" type="audio/mpeg">
-  </audio>
-
-  <footer class="footer">
-    © All rights reserved by miHoYo | Other properties and any right, title, and interest thereof and therein
-    (intellectual property rights included) not derived from Honkai: Star Rail belong to their respective owners.
-  </footer>
-  <script src="resources/js/jquery-3.2.1.min.js" defer></script>
-  <script src="resources/js/index.js" defer></script>
-  <script src="resources/js/code-overlay.js" defer></script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const audio = document.getElementById('bg-music');
-        const volumeButton = document.getElementById('music-btn');
-        
-        // 确保 audio.play() 是在用户点击后执行，这是最可靠的方式
-        volumeButton.addEventListener('click', function() {
-            if (audio.muted) {
-                audio.muted = false;
-                
-                // 强制播放
-                const playPromise = audio.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        console.error("Audio playback failed after click:", error);
-                    });
-                }
-                
-                // 假设 musicon.webp 是**有声**图标， mute.webp 是**静音**图标
-                volumeButton.src = 'resources/images/musicon.webp'; 
-                volumeButton.alt = 'Music On';
-
-            } else {
-                audio.muted = true;
-                audio.pause(); // 暂停播放
-                
-                volumeButton.src = 'resources/images/mute.webp'; 
-                volumeButton.alt = 'Music Off';
-            }
-        });
-        
-        // 初始状态检查：如果音乐是 muted，应显示静音图标 (假设 mute.webp 是静音图标)
-        // 首次加载时，确保显示静音图标
-        if (audio.muted) {
-             volumeButton.src = 'resources/images/mute.webp'; 
-             volumeButton.alt = 'Music Off';
-        }
-    });
-  </script>
+  <footer class="footer">
+    © All rights reserved by miHoYo | Other properties and any right, title, and interest thereof and therein
+    (intellectual property rights included) not derived from Honkai: Star Rail belong to their respective owners.
+  </footer>
+  <script src="resources/js/jquery-3.2.1.min.js" defer></script>
+  <script src="resources/js/index.js" defer></script>
+  <script src="resources/js/code-overlay.js" defer></script>
 </body>
 </html>
