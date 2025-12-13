@@ -241,7 +241,7 @@ html, body {
   }
 }
 
-/* ================== Intro 黑屏遮罩... ================== */
+/* ================== Intro 黑屏遮罩... (主要修改区域) ================== */
 
 @keyframes icp-fadein {
   from {
@@ -283,16 +283,13 @@ html, body {
   white-space: nowrap;
 }
 
-/* **【新增规则：确保省略号和光标垂直对齐】** */
-.dots, .caret {
-    vertical-align: middle; 
-}
-
 /* 打字样 “...”：逐步出现 0/1/2/3 个点 */
 .dots::after {
   content: "";
   display: inline-block;
   width: 0;
+  /* 【新增】确保垂直居中对齐，解决与光标的错位 */
+  vertical-align: middle;
   animation: dotsTyping 1.2s steps(4, end) infinite;
 }
 
@@ -311,8 +308,11 @@ html, body {
   height: 1em;
   background: #fff;
   margin-left: .1ch;
-  /* **【修改点：移除这行，避免光标向上偏移】** */
+  /* 【修改】移除 transform，改用 vertical-align 和 position: relative */
   /* transform: translateY(.12em); */ 
+  vertical-align: middle; 
+  position: relative;
+  top: 1px; /* 向下微调 1 像素，确保光标在省略号后面 */
   animation: caretBlink 1s steps(1, end) infinite;
 }
 
