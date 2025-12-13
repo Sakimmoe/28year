@@ -1,4 +1,5 @@
 /* ================== 字体 ================== */
+/* 注意：字体文件名中的空格可能导致兼容性问题，我已尽量保留原样 */
 @font-face {
   font-family: "Microsoft Yahei UI.ttf";
   font-weight: 1 999;
@@ -118,15 +119,15 @@ html, body {
   height: auto;
 }
 
-/* 👇👇👇 这里是修改后的倒计时数字颜色和描边 👇👇👇 */
+/* 👇👇👇 已修改的倒计时数字颜色样式 👇👇👇 */
 .content .time-box div p {
   font-family: "Microsoft Yahei UI", sans-serif;
   font-weight: 500;
   font-size: clamp(60px, 15vw, 150px);
   margin: 0;
   /* 核心修改：淡水粉色 */
-  color: #FFDDEE; 
-  /* 柔和的白色描边 */
+  color: #FFDDEE;
+  /* 柔和的白色描边，提高对比度 */
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.7);
   text-stroke: 1.5px rgba(255, 255, 255, 0.7);
